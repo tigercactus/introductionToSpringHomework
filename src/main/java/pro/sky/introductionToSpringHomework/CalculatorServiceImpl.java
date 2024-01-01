@@ -21,7 +21,11 @@ public class CalculatorServiceImpl implements CalculatorService {
     }
 
     public double divide(Integer num1 , Integer num2){
-        double result = (double)num1/num2;
-            return result;
+        if (num2 ==0){
+            throw new NullDivisionException("На ноль делить нельзя");}
+            else {
+
+               double result = (double)num1/num2;
+            return result;}
     }
 }

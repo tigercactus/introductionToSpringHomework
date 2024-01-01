@@ -44,7 +44,7 @@ public class CalculatorController {
         public String divide (@RequestParam(value = "num1", required = false) Integer
         num1, @RequestParam(value = "num2", required = false) Integer num2){
             if (num1 == null || num2 == null) return "Параметры не должны быть пустыми: пожалуйста, укажите оба числа";
-            else if (num2 == 0) return "На ноль делить нельзя, введите другое значение у второго параметра";
+
             else {
                 String toBeReturned = String.format("%d / %d = %f", num1, num2, calculatorService.divide(num1, num2));
                 return toBeReturned;
